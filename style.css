@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+
+:root{
+    --primary-color: linear-gradient(to bottom right, #FF7F50, #6A5ACD, #ae00ff);
+    --white: #ffffff;
+    --blue: #001aff;
+    --svg-color: #b403b4;
+}
+
+body{
+    background-image: var(--primary-color);
+    font-family: 'Mohave', sans-serif;
+    overflow-x: hidden;
+}
+
+.navigation{
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.logo-header{
+    position: relative;
+    left: 55px;
+    top: 20px;
+}
+
+.list-header{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.list-non-bullet{
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.list-item-inline{
+    display: inline;
+    letter-spacing: 0.36px;
+    font-size: 1.5rem;
+    padding: 0rem 2rem;
+    border: 2px;
+}
+
+.list-item-inline:hover{
+    font-weight: bolder;
+    letter-spacing: 0;
+}
+
+.right-spacing{
+    margin: 0 2rem 0 0;
+}
+
+.margin-spacing{
+    max-width: 700px;
+    margin: auto;
+    padding: 5rem 5rem;
+    text-align: center;
+}
+
+.head-style{
+    padding: 0.5rem 0rem;
+    margin: 0rem 0rem;
+    text-decoration: underline;
+}
+
+.head-space{
+    padding-top: 130px;
+}
+
+.svg-spacing{
+    margin-left: 350px;
+}
+
+.para-space{
+    font-size: 1.5rem;
+    margin: 0 0;
+}
+
+.name{
+    font-size: 100px;
+    color: aqua;
+}
+
+.float-container{
+    right: 20px;
+    top: 30%;
+    position: fixed;
+}
+
+.sticky{
+    list-style: none;
+}
+
+.float:hover{
+    transform: translateX(10px);
+    transition: ease 500ms;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem;
+}
+
+.console-container {
+    font-size: 100px;
+    text-align: center;
+    height: 200px;
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.console-underscore {
+    display:inline-block;
+    position:relative;
+    right: 20px;
+}
+
+#text{
+    padding-left: 35px;
+}
+
+
+.svg-wrapper {
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+}
+  
+.shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #19f6e8;
+}
+  
+.text {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+}
+  
+@keyframes draw {
+    0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    }
+    100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+    }
+}
+  
+.svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+}
+
+.svg-hero{
+    width: 50%;
+    height: auto;
+    transform: scale(0.5);
+    padding-right: 5rem;
+}
+
+@media (min-width: 900px) {
+    nav{
+        display: flex;
+    justify-content: space-between;
+    }
+    .banner{
+        display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    }
+    footer{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    footer div{
+        padding: 0.5em 50px;
+    }
+    .svg-hero{
+        transform: scale(1);
+    }
+}
